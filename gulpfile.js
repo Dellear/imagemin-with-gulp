@@ -21,12 +21,12 @@ gulp.task('default', function (done) {
         });
 
 
-        imagemin(['src/images/*.{jpg,png}'], 'dist/images', {
-            plugins: [jpgmin, pngmin]
-        }).then(files => {
-            files.forEach(file => {
-                console.log(file.path);
-            });
-            done();
+    imagemin(['src/images/*.{jpg,png}'], 'dist/images', {
+        plugins: [jpgmin, pngmin]
+    }).then(files => {
+        files.forEach(file => {
+            console.log(file.path);
         });
+        done();
+    });
 });
